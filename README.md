@@ -8,13 +8,13 @@ Create a simple content management system that allows users to add, delete, or u
 
 Creating this web application will provide exposure to:
 
--[ ] Express (or other web framework)
+-Express (or other web framework)
 
--[ ] Javascript
+-Javascript
 
--[ ] Simple relational database interactions (Create, Read, Update, Delete), with SQL practice
+-Simple relational database interactions (Create, Read, Update, Delete), with SQL practice
 
--[ ] Simple server side templating (to render data retrieved from the database)
+-Simple server side templating (to render data retrieved from the database)
 
 ###Specifications
 
