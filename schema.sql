@@ -83,7 +83,8 @@ The Starrett family life forever changes when a man named Shane rides out of the
 This classic Western, originally published in 1949, is a profoundly moving story of the influence of a singular character on one boy&8217s life.', 'https://images-na.ssl-images-amazon.com/images/I/51r2pKBgFfL.jpg', '10-17-2006'),
 ('Brave New World', 'Aldous Huxley is the greatest 20th century writer in English —Chicago Tribune
 Aldous Huxley is rightly considered a prophetic genius and one of the most important literary and philosophical voices of the 20th Century, and Brave New World is his masterpiece. From the author of The Doors of Perception, Island, and countless other works of fiction, non-fiction, philosophy, and poetry, comes this powerful work of speculative fiction that has enthralled and terrified readers for generations. Brave New World remains absolutely relevant to this day as both a cautionary dystopian tale in the vein of the George Orwell classic 1984, and as thought-provoking, thoroughly satisfying entertainment.', 'https://images-na.ssl-images-amazon.com/images/I/714b8-%2BK3EL.jpg', '11-29-2014'),
-('The Hound of the Baskervilles', 'The Hound of the Baskervilles is the third of the four crime novels written by Sir Arthur Conan Doyle featuring the detective Sherlock Holmes. Originally serialised in The Strand Magazine from August 1901 to April 1902, it is set largely on Dartmoor in Devon in Englands West Country and tells the story of an attempted murder inspired by the legend of a fearsome, diabolical hound of supernatural origin. Sherlock Holmes and his companion Dr. Watson investigate the case. This was the first appearance of Holmes since his intended death in "The Final Problem", and the success of The Hound of the Baskervilles led to the characters eventual revival.', 'https://images-na.ssl-images-amazon.com/images/I/417o9qn8ioL.jpg', '11-29-2014');
+('The Hound of the Baskervilles', 'The Hound of the Baskervilles is the third of the four crime novels written by Sir Arthur Conan Doyle featuring the detective Sherlock Holmes. Originally serialised in The Strand Magazine from August 1901 to April 1902, it is set largely on Dartmoor in Devon in Englands West Country and tells the story of an attempted murder inspired by the legend of a fearsome, diabolical hound of supernatural origin. Sherlock Holmes and his companion Dr. Watson investigate the case. This was the first appearance of Holmes since his intended death in "The Final Problem", and the success of The Hound of the Baskervilles led to the characters eventual revival.', 'https://images-na.ssl-images-amazon.com/images/I/417o9qn8ioL.jpg', '11-29-2014'), ('All About Love: New Visions', 'The word "love" is most often defined as a noun, yet...we would all love better if we used it as a verb," writes bell hooks as she comes out fighting and on fire in All About Love. Here, at her most provocative and intensely personal, the renowned scholar, cultural critic, and feminist skewers our view of love as romance. In its place she offers a proactive new ethic for a people and a society bereft with lovelessness.  As bell hooks uses her incisive mind and razor-sharp pen to explore the question "What is love?" her answers strike at both the mind and heart. In thirteen concise chapters, hooks examines her own search for emotional connection and societys failure to provide a model for learning to love. Razing the cultural paradigm that the ideal love is infused with sex and desire, she provides a new path to love that is sacred, redemptive, and healing for the individuals and for a nation. The Utne Reader declared bell hooks one of the "100 Visionaries Who Can Change Your Life." All About Love is a powerful affirmation of just how profoundly she can.', 'https://images-na.ssl-images-amazon.com/images/I/41mn0wOhpBL.jpg', '01-09-2001'), ('Parable of the Sower', 'When unattended environmental and economic crises lead to social chaos, not even gated communities are safe. In a night of fire and death Lauren Olamina, a ministers young daughter, loses her family and home and ventures out into the unprotected American landscape. But what begins as a flight for survival soon leads to something much more: a startling vision of human destiny... and the birth of a new faith.', 'https://images-na.ssl-images-amazon.com/images/I/71jg6gRAKkL.jpg', '01-01-2000'), ('Parable of the Talents', 'Lauren Olaminas love is divided among her young daughter, her community, and the revelation that led Lauren to found a new faith that teaches "God Is Change". But in the wake of environmental and economic chaos, the U.S. government turns a blind eye to violent bigots who consider the mere existence of a black female leader a threat. And soon Lauren must either sacrifice her child and her followers -- or forsake the religion that can transform human destiny.', 'https://images-na.ssl-images-amazon.com/images/I/81EzixAspCL.jpg', '01-01-2000'), ('I Know Why the Caged Bird Sings', 'Here is a book as joyous and painful, as mysterious and memorable, as childhood itself. I Know Why the Caged Bird Sings captures the longing of lonely children, the brute insult of bigotry, and the wonder of words that can make the world right. Maya Angelou’s debut memoir is a modern American classic beloved worldwide. Sent by their mother to live with their devout, self-sufficient grandmother in a small Southern town, Maya and her brother, Bailey, endure the ache of abandonment and the prejudice of the local “powhitetrash.” At eight years old and back at her mother’s side in St. Louis, Maya is attacked by a man many times her age—and has to live with the consequences for a lifetime. Years later, in San Francisco, Maya learns that love for herself, the kindness of others, her own strong spirit, and the ideas of great authors (“I met and fell in love with William Shakespeare”) will allow her to be free instead of imprisoned. Poetic and powerful, I Know Why the Caged Bird Sings will touch hearts and change minds for as long as people read.
+ “I Know Why the Caged Bird Sings liberates the reader into life simply because Maya Angelou confronts her own life with such a moving wonder, such a luminous dignity.”—James Baldwin', 'https://images-na.ssl-images-amazon.com/images/I/71L6HakRhzL.jpg', '04-21-2009');
 
 
 INSERT INTO authors (name)
@@ -102,7 +103,10 @@ VALUES ('Adam Smith'),
 ('Jack Schaefer'),
 ('Arthur Conan Doyle'),
 ('Thich Nhat Hanh'),
-('Charles Dickens');
+('Charles Dickens'),
+('Bell Hooks'),
+('Octavia Butler'),
+('Maya Angelou');
 
 INSERT INTO genres (name)
 VALUES ('Economics'),
@@ -115,9 +119,34 @@ VALUES ('Economics'),
 ('Satire'),
 ('Mystery'),
 ('Dystopian Fiction'),
-('Self Help');
+('Self Help'),
+('Biographies');
 
 --- Join Tables Start Here
+
+INSERT INTO book_authors
+  SELECT books.id, authors.id FROM books
+  CROSS JOIN authors
+  WHERE books.title = 'I Know Why the Caged Bird Sings'
+  AND authors.name = 'Maya Angelou';
+
+INSERT INTO book_authors
+  SELECT books.id, authors.id FROM books
+  CROSS JOIN authors
+  WHERE books.title = 'Parable of the Talents'
+  AND authors.name = 'Octavia Butler';
+
+INSERT INTO book_authors
+  SELECT books.id, authors.id FROM books
+  CROSS JOIN authors
+  WHERE books.title = 'Parable of the Sower'
+  AND authors.name = 'Octavia Butler';
+
+INSERT INTO book_authors
+  SELECT books.id, authors.id FROM books
+  CROSS JOIN authors
+  WHERE books.title = 'All About Love: New Visions'
+  AND authors.name = 'Bell Hooks';
 
 INSERT INTO book_authors
   SELECT books.id, authors.id FROM books
@@ -220,6 +249,30 @@ INSERT INTO book_authors
   CROSS JOIN authors
   WHERE books.title = 'Anna Karenina'
   AND authors.name = 'Leo Tolstoy';
+
+INSERT INTO book_genres
+  SELECT books.id, genres.id FROM books
+  CROSS JOIN genres
+  WHERE books.title = 'I Know Why the Caged Bird Sings'
+  AND genres.name = 'Biographies';
+
+INSERT INTO book_genres
+  SELECT books.id, genres.id FROM books
+  CROSS JOIN genres
+  WHERE books.title = 'Parable of the Talents'
+  AND genres.name = 'Dystopian Fiction';
+
+INSERT INTO book_genres
+    SELECT books.id, genres.id FROM books
+    CROSS JOIN genres
+    WHERE books.title = 'Parable of the Sower'
+    AND genres.name = 'Dystopian Fiction';
+
+INSERT INTO book_genres
+    SELECT books.id, genres.id FROM books
+    CROSS JOIN genres
+    WHERE books.title = 'All About Love:New Visions'
+    AND genres.name = 'Self Help';
 
 INSERT INTO book_genres
   SELECT books.id, genres.id FROM books
