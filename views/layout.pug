@@ -1,7 +1,29 @@
 doctype html
+//- /*html
+//-   head
+//-     title= title
+//-     p hi,
+//-     link(rel='stylesheet', href='/stylesheets/style.css')
+//-   body
+//-     block content*/
+
+
+//- /*the new code */
+
+
+doctype html
 html
   head
-    title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    title Nav Bar
   body
-    block content
+    nav
+      a(target='_blank', href='/')
+        img(src='/images/logo.png', alt='logo', width='100', height='100')
+      ul
+        li
+          a(href='/') Home
+        li
+          a(href='/books/add') Add Book
+
+block content

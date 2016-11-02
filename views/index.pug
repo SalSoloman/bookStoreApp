@@ -1,5 +1,56 @@
+//- extends layout
+//-
+//- block content
+//-   h1= title
+//-   p Welcome to #{title}
+
+
+//- /*The new code */
+
+
+
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  main
+    aside
+      form
+        div
+          input.search-box(type='text', name='search', placeholder='Search..')
+
+        label
+          input(type='radio', value='byTitle', name='type')
+          i Book Titles
+        label
+          input(type='radio', value='byAuthor', name='type')
+          i Authors
+        label
+          input(type='radio', value='byGenre', name='type')
+          i Genres
+
+        div
+          button.submit(type='submit') Search
+
+    article
+      .page
+        p pages:
+        - var page = 0
+        while page * 10 < count
+          a(href=`/?page=${page + 1}`)= ++page
+
+      //- if books.length > 0
+      //-   each book in books
+      //-     a(href=`http://localhost:3000/books/${book.id}`, target='_blank')
+      //-       .book
+      //-         img(src=`${book.image}`, alt=`${book.title}`, width='75', height='100')
+      //-         h3= book.title
+      //-         h4= book.authors.map( a => a.name ).join( ', ')
+      //-         p= book.genres.map( g => g.name ).join( ', ')
+      //- else
+      //-   h3 Sorry, I can't find any results for '#{search}' when searching #{type}!
+      //-
+      //- .page
+      //-   p pages:
+      //-   - var page = 0
+      //-   while page * 10 < count
+      //-     a(href=`/?page=${page + 1}`)= ++page

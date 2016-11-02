@@ -1,8 +1,213 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}*/
+
+
+
+body {
+  background: url("https://www.walldevil.com/wallpapers/a41/library-background-wallpaper-knowledge.jpg") no-repeat center fixed;
+  background-size: cover;
+  margin: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow-y: auto;
+  /*background-color: #AC6514;*/
+}
+
+nav img {
+  flex: 1
+}
+
+li {
+  display: inline;
+}
+
+ul {
+  flex: 9;
+}
+
+a {
+  background: "https://s-media-cache-ak0.pinimg.com/236x/52/4c/8c/524c8c68ada0f6cdff11d6d70d3fc622.jpg";
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+li {
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  /*background-color: #422709;*/
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+
+}
+
+main {
+  height: 60em;
+  padding-top: 150px;
+  color: #fff;
+}
+
+aside {
+  position: fixed;
+  padding: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
+}
+
+aside form label {
+  padding: 10px;
+}
+
+aside form div {
+  padding: 10px;
+}
+
+article {
+  padding-left: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px #000;
+  padding-bottom: 20px;
+}
+
+article .page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.book {
+  padding: 20px;
+}
+
+.book img {
+  width: 100px;
+  height: 150px;
+  float: left;
+  padding-right: 20px;
+}
+
+.book h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.detail {
+  color: white;
+  text-shadow: 2px 2px #000;
+  padding-top: 180px;
+  padding-left: 50px;
+  padding-right: 20%;
+}
+
+.detail img {
+  float: left;
+  padding-right: 20px;
+}
+
+.detail .links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  padding-top: 50px;
+  font-size: 1.2em;
+}
+
+.inputAll {
+  width: 400px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.4em;
+  background-color: white;
+  background-position: 10px 10px;
+  padding: 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.addBook {
+  padding: 5em;
+}
+
+.textBox {
+  padding-bottom: 20px;
+}
+
+input[type=text]:focus {
+  width: 80%;
+
+}
+
+.search-box {
+  padding: 12px 20px 12px 40px;
+  background-image: url('http://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 150px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.4em;
+  background-color: white;
+  background-position: 10px 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.submit {
+  width: 150px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-position: 10px 10px;
+  margin-top: 50px;
+  transition: width 0.4s ease-in-out;
+  box-shadow:inset -1px 0px 10px -14px #d4aad4;
+  /*background-color:#422709;*/
+  border-radius:11px;
+  display:inline-block;
+  cursor:pointer;
+  color:#f0f0f0;
+  font-size:17px;
+  padding:10px 31px;
+  text-decoration:none;
+  text-shadow:0px -1px 0px #000000;
+}
+
+/*.submit:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4b88e3), color-stop(1, #0c57c9));
+  background:-moz-linear-gradient(top, #4b88e3 5%, #0c57c9 100%);
+  background:-webkit-linear-gradient(top, #4b88e3 5%, #0c57c9 100%);
+  background:-o-linear-gradient(top, #4b88e3 5%, #0c57c9 100%);
+  background:-ms-linear-gradient(top, #4b88e3 5%, #0c57c9 100%);
+  background:linear-gradient(to bottom, #4b88e3 5%, #0c57c9 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b88e3', endColorstr='#0c57c9',GradientType=0);
+  background-color:#4b88e3;
+}*/
+
+.submit:active {
+  position:relative;
+  top:1px;
+}
+
+.error {
+  color: white;
+}
+
+p {
+  font-size: 1.1em;
 }
