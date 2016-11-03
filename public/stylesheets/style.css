@@ -37,7 +37,8 @@ ul {
 
 a {
   background: "https://s-media-cache-ak0.pinimg.com/236x/52/4c/8c/524c8c68ada0f6cdff11d6d70d3fc622.jpg";
-  color: white;
+  color: #ebc944;
+  text-shadow: 2px 2px #000;
   padding: 8px 16px;
   text-decoration: none;
   font-size: 1.2em;
@@ -60,7 +61,8 @@ nav {
 main {
   height: 60em;
   padding-top: 150px;
-  color: #fff;
+  color: #ebc944;
+  text-shadow: 2px 2px #000;
 }
 
 aside {
@@ -182,7 +184,7 @@ input[type=text]:focus {
   margin-top: 50px;
   transition: width 0.4s ease-in-out;
   box-shadow:inset -1px 0px 10px -14px #d4aad4;
-  /*background-color:#422709;*/
+  background-color: #422709;
   border-radius:11px;
   display:inline-block;
   cursor:pointer;
