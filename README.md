@@ -16,7 +16,7 @@ Creating this web application will provide exposure to:
 
 -Simple server side templating (to render data retrieved from the database)
 
-### Specifications
+###Specifications
 
 -[x] Books entered in the system are listed on the home page, in pages of 10
 
