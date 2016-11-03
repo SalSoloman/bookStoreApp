@@ -18,6 +18,11 @@ body {
   /*background-color: #AC6514;*/
 }
 
+.bookview {
+  margin: 100px 100px 100px 250px;
+  alignment: center;
+}
+
 nav img {
   flex: 1
 }
