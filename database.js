@@ -31,7 +31,6 @@ const BookAuthors = {
 const Search = {
   byTitle: title => {
     const sql = `SELECT * FROM books WHERE lower(title) LIKE '%${title}%'`
-
     return db.any( sql )
   },
   byGenre: genreName => {
@@ -40,7 +39,6 @@ const Search = {
        JOIN book_genres ON book_genres.book_id=books.id
        JOIN genres ON book_genres.genre_id=genres.id
        WHERE lower(genres.name) LIKE '%${genreName}%'`
-    console.log( sql )
 
     return db.any( sql )
   },
@@ -50,7 +48,6 @@ const Search = {
        JOIN book_authors ON book_authors.book_id=books.id
        JOIN authors ON book_authors.author_id=authors.id
        WHERE lower(authors.name) LIKE '%${authorName}%'`
-    console.log( sql )
 
     return db.any( sql )
   },
