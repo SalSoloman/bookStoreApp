@@ -19,7 +19,6 @@
 
 const express = require('express')
 const router = express.Router()
-
 const { Books, Authors, Genres, Search } = require( '../database' )
 
 const PAGE_SIZE = 10
@@ -28,13 +27,15 @@ router.get( '/', function(req, res, next) {
   const page = req.query.page || 1
   const { search, type } = req.query
 
-  const bookFetch = ( search !== undefined && type !== undefined ) ?
-    getBooksSearch( search.toLowerCase(), type ) : getBooksPage
+  Books.all(PAGE_SIZE).then( books => res.render( 'index', { books } ) )
 
-    bookListing( bookFetch, page ).then( result => {
-      res.render('index', Object.assign( {}, result, { page, search, type: (type || '').replace('by', 'by ') } ))
-    })
-    .catch( error => res.send({ message: error.message, error }))
+  // const bookFetch = ( search !== undefined && type !== undefined ) ?
+  //   getBooksSearch( search.toLowerCase(), type ) : getBooksPage
+  //
+  //   bookListing( bookFetch, page ).then( result => {
+  //     res.render('index', Object.assign( {}, result, { page, search, type: (type || '').replace('by', 'by ') } ))
+  //   })
+  //   .catch( error => res.send({ message: error.message, error }))
 })
 
 const getBooksSearch = (search, type) => page => {
@@ -87,4 +88,4 @@ const bookListing = (bookFetch, page) =>
     .then( getAuthorsAndGenres )
     .then( mergeBookFields )
 
-module.exports = router 
+module.exports = router
