@@ -1,21 +1,9 @@
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}*/
-
-
-
 body {
   background: url("https://www.walldevil.com/wallpapers/a41/library-background-wallpaper-knowledge.jpg") no-repeat center fixed;
   background-size: cover;
   margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   overflow-y: auto;
-  /*background-color: #AC6514;*/
 }
 
 .bookview {
@@ -50,7 +38,6 @@ li {
 
 nav {
   position: fixed;
-  /*/background-color: #422709;*/
   display: flex;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -194,17 +181,6 @@ input[type=text]:focus {
   text-decoration:none;
   text-shadow:0px -1px 0px #000000;
 }
-
-/*.submit:hover {
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4b88e3), color-stop(1, #0c57c9));
-  background:-moz-linear-gradient(top, #4b88e3 5%, #0c57c9 100%);
-  background:-webkit-linear-gradient(top, #4b88e3 5%, #0c57c9 100%);
-  background:-o-linear-gradient(top, #4b88e3 5%, #0c57c9 100%);
-  background:-ms-linear-gradient(top, #4b88e3 5%, #0c57c9 100%);
-  background:linear-gradient(to bottom, #4b88e3 5%, #0c57c9 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b88e3', endColorstr='#0c57c9',GradientType=0);
-  background-color:#4b88e3;
-}*/
 
 .submit:active {
   position:relative;
