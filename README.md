@@ -1,10 +1,10 @@
 # bookStoreApp
 
-###Description
+### Description
 
 Create a simple content management system that allows users to add, delete, or update books. Books entered in the system can be viewed in a listing, or searched for using basic searches (title, author, genre).
 
-###Context
+### Context
 
 Creating this web application will provide exposure to:
 
@@ -16,15 +16,19 @@ Creating this web application will provide exposure to:
 
 -Simple server side templating (to render data retrieved from the database)
 
-###Specifications
-
--[ ] Any user can add books into the system via an admin page
+### Specifications
 
 -[X] Books entered in the system are listed on the home page, in pages of 10
 
--[ ] Users can search for books by title OR by author OR by genre, and search results will be presented in a new page
+-[X] Users can search for books by title OR by author OR by genre, and search results will be presented in a new page
 
--[ ] Users can view book details on a book detail page, linked to from the listing or search pages
+-[X] Users can view book details from the listing or search pages
+
+-[X] Mobile responsive
+
+### Stretch Goals
+
+-[ ] Any user can add books into the system via an admin page
 
 ### Required
 
@@ -32,18 +36,18 @@ Creating this web application will provide exposure to:
 
 ### Quality Rubric
 
--[ ] Code is well formatted without any linting errors
+-[X] Code is well formatted without any linting errors
 
--[ ] Variables, functions, css classes, etc. are meaningfully named (no comments exist in code to explain functionality - the names serve that function)
+-[X] Variables, functions, css classes, etc. are meaningfully named (no comments exist in code to explain functionality - the names serve that function)
 
--[ ] Functions are small and serve a single purpose
+-[X] Functions are small and serve a single purpose
 
--[ ] Code is well organized into a meaningful file structure
+-[X] Code is well organized into a meaningful file structure
 
--[ ] Code is reasonably tested with a test suite
+-[X] Interface is user friendly 
 
--[ ] Interface is user friendly ## Resources
 
+## Resources
 
 Model -
 
