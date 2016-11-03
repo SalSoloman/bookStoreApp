@@ -18,7 +18,7 @@ Creating this web application will provide exposure to:
 
 ### Specifications
 
--[X] Books entered in the system are listed on the home page, in pages of 10
+-[x] Books entered in the system are listed on the home page, in pages of 10
 
 -[X] Users can search for books by title OR by author OR by genre, and search results will be presented in a new page
 
