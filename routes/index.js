@@ -7,15 +7,10 @@ const PAGE_SIZE = 10
 
 router.get( '/', function( request, response) {
   const { query } = request
-  console.log( query )
 
-  const page = query.page || 1
+  const page = parseInt( query.page ) || 1
   const size = query.size || 10
   const searchBy = query.type
-  console.log(query.search)
-  console.log(typeof query.search)
-
-
 
   if( searchBy === undefined ) {
     Books.all( page, size )

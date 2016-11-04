@@ -5,7 +5,7 @@ const createBookSql = 'INSERT INTO books (title, description, image, published )
 
 const Books = {
   count: () => db.one( 'SELECT COUNT(*) FROM books' ),
-  all: offset => db.any( 'SELECT * FROM books order by id asc LIMIT 10 OFFSET $1', [offset] ),
+  all: offset => db.any( 'SELECT * FROM books order by id asc LIMIT 10 OFFSET $1', [ offset ] ),
   findById: id => db.one( 'SELECT * FROM books WHERE id=$1', [id] ),
   findAuthorsByBookId: id => db.any('SELECT * FROM authors JOIN book_authors ON book_authors.author_id=authors.id WHERE book_authors.book_id=$1', [id]),
   findGenresByBookId: id => db.any('SELECT * FROM genres JOIN book_genres ON book_genres.genre_id=genres.id WHERE book_genres.book_id=$1', [id]),
