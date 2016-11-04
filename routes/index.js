@@ -1,42 +1,9 @@
-// var express = require('express');
-// var router = express.Router();
-//
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
-//
-// module.exports = router;
-//
-
-
-
-
-// The new code
-
-
-
 
 const express = require('express')
 const router = express.Router()
 const { Books, Authors, Genres, Search } = require( '../database' )
 
 const PAGE_SIZE = 10
-
-// router.get( '/', function(req, res, next) {
-//   const page = req.query.page || 1
-//   const { search, type } = req.query
-//
-//   Books.all(PAGE_SIZE).then( books => res.render( 'index', { books } ) )
-//
-//   // const bookFetch = ( search !== undefined && type !== undefined ) ?
-//   //   getBooksSearch( search.toLowerCase(), type ) : getBooksPage
-//   //
-//   //   bookListing( bookFetch, page ).then( result => {
-//   //     res.render('index', Object.assign( {}, result, { page, search, type: (type || '').replace('by', 'by ') } ))
-//   //   })
-//   //   .catch( error => res.send({ message: error.message, error }))
-// })
 
 router.get( '/', function( request, response) {
   const { query } = request

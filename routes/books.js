@@ -1,8 +1,44 @@
-
 const express = require('express')
 const router = express.Router()
 
 const { Books, Authors, BookAuthors } = require( '../database' )
+
+
+router.get('/', function(req, res) {
+  res.send('hello world ')
+})
+
+
+router.get('/add', (request, response) => {
+  response.render( 'books/form', { book: {} } )
+})
+
+router.post('/add', (request, response) => {
+  const { title, author, genre, image, description } = request.body
+
+  Promise.all([
+    Book.createBookSql( request.body),
+    db.addAuthor( author )
+  ])
+  .then( results => {
+    const bookId = results[0]
+    const authorId = results[1]
+
+    db.connectAuthorsWithBook(authorId.id, bookId.id)
+    .then( (results) => {
+      response.redirect(`/books/details/${results.book_id}`)
+    })
+  })
+  .catch( (error) => {
+      response.render('error', { error: error } )
+  })
+
+})
+
+
+
+
+
 
 router.get( '/add', ( request, response, next ) => {
   response.render( 'books/form', { book: {} } )
