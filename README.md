@@ -28,7 +28,7 @@ Creating this web application will provide exposure to:
 
 ### Stretch Goals
 
--[ ] Any user can add books into the system via an admin page
+-[X] Any user can add books into the system 
 
 ### Required
 
