@@ -52,3 +52,14 @@ Creating this web application will provide exposure to:
 Model -
 
 http://ondras.zarovi.cz/sql/demo/
+
+
+
+
+
+
+
+
+## Our Schema
+
+<a href="http://imgur.com/qLZwNS5"><img src="http://i.imgur.com/qLZwNS5.png" title="source: imgur.com" /></a>
