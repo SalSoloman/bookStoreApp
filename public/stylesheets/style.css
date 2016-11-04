@@ -136,10 +136,17 @@ article .page {
 
 .addBook {
   padding: 5em;
+  /*margin: 100px 50px 100px 50px;*/
 }
 
 .textBox {
   padding-bottom: 20px;
+  margin: 20px 40px 30px 200px;
+}
+
+.textBox1 {
+  padding-bottom: 20px;
+  margin: 80px 40px 30px 200px;
 }
 
 input[type=text]:focus {
