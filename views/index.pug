@@ -23,11 +23,9 @@ block content
           button.submit(type='submit') Search
 
     article
-      .page
-        p pages:
-        - var page = 0
-        while page * 10 < count
-          a(href=`/?page=${page + 1}`)= ++page
+      if page > 1
+        a(href="/?page=" + (page - 1)) Prev
+      a(href="/?page=" + (page + 1)) Next
 
     div.bookview
      for book in books
