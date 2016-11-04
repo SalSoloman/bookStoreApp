@@ -18,33 +18,33 @@ Creating this web application will provide exposure to:
 
 ### Specifications
 
--[X] Books entered in the system are listed on the home page, in pages of 10
+- [X] Books entered in the system are listed on the home page, in pages of 10
 
--[X] Users can search for books by title OR by author OR by genre, and search results will be presented in a new page
+- [X] Users can search for books by title OR by author OR by genre, and search results will be presented in a new page
 
--[X] Users can view book details from the listing or search pages
+- [X] Users can view book details from the listing or search pages
 
--[X] Mobile responsive
+- [X] Mobile responsive
 
 ### Stretch Goals
 
--[X] Any user can add books into the system 
+- [X] Any user can add books into the system 
 
 ### Required
 
--[X] The artifact produced is properly licensed, preferably with the MIT license. 
+- [X] The artifact produced is properly licensed, preferably with the MIT license. 
 
 ### Quality Rubric
 
--[X] Code is well formatted without any linting errors
+- [X] Code is well formatted without any linting errors
 
--[X] Variables, functions, css classes, etc. are meaningfully named (no comments exist in code to explain functionality - the names serve that function)
+- [X] Variables, functions, css classes, etc. are meaningfully named (no comments exist in code to explain functionality - the names serve that function)
 
--[X] Functions are small and serve a single purpose
+- [X] Functions are small and serve a single purpose
 
--[X] Code is well organized into a meaningful file structure
+- [X] Code is well organized into a meaningful file structure
 
--[X] Interface is user friendly 
+- [X] Interface is user friendly 
 
 
 ## Resources
